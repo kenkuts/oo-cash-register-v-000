@@ -20,4 +20,8 @@ class CashRegister
 
     return "After the discount, the total comes to $#{self.total}."
   end
+
+  def items
+    @items.faltten
+  end 
 end
