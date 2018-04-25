@@ -3,6 +3,7 @@ class CashRegister
 
   def initialize(discount=0)
     @total = 0
+    @items = []
     @discount = discount
   end
 
@@ -20,4 +21,7 @@ class CashRegister
     return "After the discount, the total comes to $#{self.total}."
   end
 
+  def items
+    
+  end
 end
