@@ -14,8 +14,7 @@ class CashRegister
     self.discount /= 100.00
     self.discount *= self.total
     self.total -= self.discount
-    return "After the discount, the total comes
-    to $#{self.total}."
+    puts "After the discount, the total comes to $#{self.total}."
   end
 
 end
