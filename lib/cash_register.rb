@@ -18,5 +18,4 @@ class CashRegister
     to $#{self.total}."
   end
 
-  def
 end
