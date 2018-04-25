@@ -5,10 +5,12 @@ class CashRegister
     @total = 0
     @items = []
     @discount = discount
+    @running_total = []
   end
 
   def add_item(item, price, quant=1)
     self.items.concat([item] * quant)
+    self.running_total.concat([price] * quant)
     self.total += price * quant
   end
 
@@ -22,4 +24,9 @@ class CashRegister
     return "After the discount, the total comes to $#{self.total}."
   end
 
+  def void_last_transaction
+    self.items.pop
+    void = self.running_total.pop
+    self.total -= void
+  end
 end
