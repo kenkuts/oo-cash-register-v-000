@@ -23,5 +23,5 @@ class CashRegister
 
   def items
     @items.faltten
-  end 
+  end
 end
