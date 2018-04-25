@@ -8,7 +8,8 @@ class CashRegister
   end
 
   def add_item(item, price, quant=1)
-    (self.items << [item] * quant).flatten    self.total += price * quant
+    (self.items << [item] * quant).flatten.flatten
+    self.total += price * quant
   end
 
   def apply_discount
